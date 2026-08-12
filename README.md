@@ -4,5 +4,4 @@
 web app to add recipes with auth, steps to make the dish, ingredients from the db. (school assignment)
 
 ## unfinished (today)
-- edit-delete in admin/index.php havent been developed
 - ingredients isnt included when making recipe
