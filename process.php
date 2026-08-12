@@ -122,4 +122,50 @@
             return [];
         }
     }
+
+    function getUser($pdo, $id) {
+        $stmt = $pdo->prepare("SELECT * FROM users WHERE id = :id");
+        $stmt->execute(["id" => $id]);
+        return $stmt->fetch();
+    }
+
+    function editUser($pdo, $id, $name, $username, $email, $pass, $role) {
+        if (!empty($pass)) {
+            $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
+
+            $stmt = $pdo->prepare(
+                "UPDATE users
+                SET name = :name, username = :username, email = :email, pass = :pass, role = :role
+                WHERE id = :id"
+            );
+
+            return $stmt->execute([
+                "name" => $name,
+                "username" => $username,
+                "email" => $email,
+                "pass" => $hashedPass,
+                "role" => $role,
+                "id" => $id,
+            ]);
+        }
+
+        $stmt = $pdo->prepare(
+            "UPDATE users
+            SET name = :name, username = :username, email = :email, role = :role
+            WHERE id = :id"
+        );
+
+        return $stmt->execute([
+            "name" => $name,
+            "username" => $username,
+            "email" => $email,
+            "role" => $role,
+            "id" => $id,
+        ]);
+    }
+
+    function deleteUser($pdo, $id) {
+        $stmt = $pdo->prepare("DELETE FROM users WHERE id = :id");
+        return $stmt->execute(["id" => $id]);
+    }
 ?>

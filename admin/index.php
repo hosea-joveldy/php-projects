@@ -10,10 +10,16 @@
         exit();
     } 
 
-    if($_SERVER["REQUEST_METHOD"] === "POST") {
-	session_destroy();
-	header("Location: ../login.php");
-	exit();
+    if ($_SERVER["REQUEST_METHOD"] === "POST" && ($_POST["action"] ?? "") === "delete_user") {
+        deleteUser($pdo, $_POST["id"]);
+        header("Location: index.php");
+        exit();
+    }
+
+    if($_SERVER["REQUEST_METHOD"] === "POST"&& isset($_POST["logout"])) {
+        session_destroy();
+        header("Location: ../login.php");
+        exit();
     }
 
     adminCheck($pdo);
@@ -156,8 +162,12 @@
                                     </span>
                                 </td>
                                 <td class="px-4 py-3 text-right space-x-2">
-                                    <a href="edit_user.php?id=<?= $user['id'] ?>" class="text-xs text-[#c9a15a] hover:underline">Edit</a>
-                                    <a href="../process.php?action=delete_user&id=<?= $user['id'] ?>" onclick="return confirm('Are you sure?')" class="text-xs text-red-400 hover:underline">Delete</a>
+                                    <a href="user/edit.php?id=<?= $user['id'] ?>" class="text-xs text-[#c9a15a] hover:underline">Edit</a>
+                                    <form method="POST" onsubmit="return confirm('Are you sure?')" class="inline">
+                                        <input type="hidden" name="action" value="delete_user">
+                                        <input type="hidden" name="id" value="<?= $user['id'] ?>">
+                                        <button type="submit" class="text-xs text-red-400 hover:underline">Delete</button>
+                                    </form>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
