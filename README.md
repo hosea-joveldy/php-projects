@@ -4,7 +4,6 @@
 web app to add recipes with auth, steps to make the dish, ingredients from the db. (school assignment)
 
 ## unfinished (today)
-- edit-delete in admin/index.php havent been developed
 - ingredients isnt included when making recipe
 
 [Demo](https://drive.google.com/file/d/1Yse8F0n8Xzk34xQVa8A1F-laVYlLlZP8/view?usp=sharing)
