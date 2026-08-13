@@ -13,7 +13,7 @@ a collection of projects from school assignments
 - ingredients isnt included when making recipe
 
 ### base8
-- record a demo
+- none
 
 ### Demo
 - [resepku](https://drive.google.com/file/d/1Yse8F0n8Xzk34xQVa8A1F-laVYlLlZP8/view?usp=sharing)
