@@ -16,5 +16,5 @@ a collection of projects from school assignments
 - record a demo
 
 ### Demo
-[resepku](https://drive.google.com/file/d/1Yse8F0n8Xzk34xQVa8A1F-laVYlLlZP8/view?usp=sharing)
-[base8](https://drive.google.com/file/d/1pLvFs_729fkwQaJmOrf-ypnRbUedQCIq/view?usp=sharing)
+- [resepku](https://drive.google.com/file/d/1Yse8F0n8Xzk34xQVa8A1F-laVYlLlZP8/view?usp=sharing)
+- [base8](https://drive.google.com/file/d/1pLvFs_729fkwQaJmOrf-ypnRbUedQCIq/view?usp=sharing)
