@@ -7,7 +7,8 @@ a collection of projects from school assignments
 - resepku: web app to add recipes with auth, steps to make the dish, ingredients from the db.
 - base8: simple form to calculate whether a unit of country birthday is a leap year.
 - base9: simple nested function application with multiply and output functions.
-- base10: introduction to oop, a class with two functions.
+- base10: introduction to oop, a car class with prop and methods.
+- base11: a simple calculator using oop.
 
 ## Demo
 - [resepku](https://drive.google.com/file/d/1Yse8F0n8Xzk34xQVa8A1F-laVYlLlZP8/view?usp=sharing)
