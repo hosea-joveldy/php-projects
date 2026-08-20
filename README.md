@@ -9,6 +9,7 @@ a collection of projects from school assignments
 - base9: simple nested function application with multiply and output functions.
 - base10: introduction to oop, a car class with prop and methods.
 - base11: a simple calculator using oop.
+- base12: a simple web app battle game.
 
 ## notes
 - from base9 onward, the code will follow PSR-12 convention because i changed my ide, and the php plugin of it strictly follows PSR-12.
