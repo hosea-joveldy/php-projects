@@ -8,17 +8,17 @@ class Character
     public $health = 100;
     public $def = 1;
 
-    public function attack(int $oppositeHealth, float $oppositeDef)
+    public function attack(int $oppositeHealth, float $oppositeDef): float
     {
         return $oppositeHealth -= (rand(5, 15) / $oppositeDef);
     }
 
-    public function heal()
+    public function heal(): void
     {
         $this->health += rand(2, 8);
     }
 
-    public function defense()
+    public function defense(): void
     {
         $this->def += (rand(1, 2) / 10);
     }

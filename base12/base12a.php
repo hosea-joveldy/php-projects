@@ -7,7 +7,7 @@ class Bmi
     public $weight;
     public $height;
 
-    public function cal($weightUnit, $heightUnit)
+    public function cal($weightUnit, $heightUnit): string|int
     {
         $weight = $this->weight;
         $height = $this->height;
@@ -30,7 +30,7 @@ class Bmi
                 break;
             case "dg":
                 $weight = $weight / 10000;
-                break;  
+                break;
             case "cg":
                 $weight = $weight / 100000;
                 break;
@@ -53,7 +53,7 @@ class Bmi
                 break;
             case "dm":
                 $height = $height / 10;
-                break;  
+                break;
             case "cm":
                 $height = $height / 100;
                 break;

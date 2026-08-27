@@ -1,2 +1,3 @@
 .env
 *Zone.Identifier
+.php-cs-fixer.dist.php
